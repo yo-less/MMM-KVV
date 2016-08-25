@@ -1,0 +1,30 @@
+.MMM-KVV .table {
+    border-spacing: 0px 0px;
+    border-collapse: separate;
+    text-align: left;
+	}
+
+.MMM-KVV .spacerRow {
+	padding-bottom: 5px;
+	}
+
+.MMM-KVV .destination {
+	font-weight: normal;
+	color: white;
+	}
+	
+.MMM-KVV .line {
+    border-spacing: 10px 0px;
+    border-collapse: separate;
+    text-align: left;
+	color:white;
+	font-weight: normal;
+	}
+	
+.MMM-KVV .departure {
+	padding-left: 10px;
+	text-align: right;
+	font-weight: normal;
+	color: white;
+	}
+	

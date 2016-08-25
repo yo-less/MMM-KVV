@@ -1,0 +1,28 @@
+{
+  "name": "MMM-KVV",
+  "version": "1.0.0",
+  "description": "MagicMirror² module - station monitor for the Karlsruhe public transport system (KVV)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yo-less/MMM-KVV.git"
+  },
+  "keywords": [
+    "MagicMirror",
+    "KVV",
+	"VBK",
+	"Karlsruhe",
+	"magic mirror",
+    "smart mirror",
+    "public transport",
+    "local transit"  
+  ],
+  "author": "yo-less",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yo-less/MMM-KVV/issues"
+  },
+  "homepage": "https://github.com/yo-less/MMM-KVV#readme",
+  "dependencies": {
+    "request": "^2.15.8"
+  }
+}
