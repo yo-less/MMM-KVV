@@ -7,15 +7,14 @@ It's always nice to see mirrors using my work, so feel free to send me some scre
 
 Lastly, why not join in on our discussions at the official [MagicMirror<sup>2</sup> Forum](http://forum.magicmirror.builders/)?
 
-## Current version
-
-v1.0.1
-
-
 ## Screenshots
 
 ![German version](screenshots/screenshot_de.png)
 ![English version](screenshots/screenshot_en.png)
+
+## Current version
+
+v1.0.1
 
 ## Languages
 As of version 1.0.0, MMM-KVV features language support for `German (de)` and `English (en)` mirrors.
