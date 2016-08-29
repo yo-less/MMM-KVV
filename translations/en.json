@@ -3,5 +3,7 @@
   "DESTINATION": "Destination",
   "DEPARTURE": "Departure",
   "NOW": "now",
-  "TIME": ""
+  "TIME": "",
+  "NO-TRAMS": "No connections available"
+  
 }

@@ -68,72 +68,126 @@ Module.register("MMM-KVV", {
         
 		} else {
 			
-		// Create connection table once data is received
+			// Start creating connections table
 			
 			var table = document.createElement("table");
 			table.classList.add("small", "table");
 			table.border='0';
-			
-			if (this.config.labelRow) {
-				table.appendChild(this.createLabelRow());
-			}
-			
-			table.appendChild(this.createSpacerRow());
 				
-		// Listing selected connections
-			var counter = 0;
-			
-			for (var f in this.kvv_data.departures){
+							
+			// Check if there are any connections before adding a label row
 				
-				var tram = this.kvv_data.departures[f];
+				var counter = 0;
 				
-				if(this.config.lines !== '' ) {
-				
-					if(this.kvv_lines(tram.route, this.config.lines)) {
-																	
-								if (this.config.direction === '1') {
-									if (tram.direction === '1') {
-											table.appendChild(this.createDataRow(tram));
+				for (var f in this.kvv_data.departures){
+					
+					var tram = this.kvv_data.departures[f];
+					
+					if(this.config.lines !== '' ) {
+					
+						if(this.kvv_lines(tram.route, this.config.lines)) {
+																		
+									if (this.config.direction === '1') {
+										if (tram.direction === '1') {
 											counter = counter + 1;
-									}
-								} else if (this.config.direction === '2') {
-									if (tram.direction === '2') {
-											table.appendChild(this.createDataRow(tram));
+										}
+									} else if (this.config.direction === '2') {
+										if (tram.direction === '2') {
 											counter = counter + 1;
+										}
+									} else {
+										counter = counter + 1;
 									}
-								} else {
-									table.appendChild(this.createDataRow(tram));
-									counter = counter + 1;
+						} 
+					
+					} else {
+						
+						if (this.config.direction === '1') {
+								if (tram.direction === '1') {
+										counter = counter + 1;
 								}
+							} else if (this.config.direction === '2') {
+								if (tram.direction === '2') {
+										counter = counter + 1;
+								}
+							} else {
+								counter = counter + 1;
+							}
+					}
+					
+					}
+									
+				if (counter > 0 && this.config.labelRow) {
+					table.appendChild(this.createLabelRow());
+				}
+				
+				table.appendChild(this.createSpacerRow());
+					
+			// Listing selected connections
+				var counter = 0;
+				
+				for (var f in this.kvv_data.departures){
+					
+					var tram = this.kvv_data.departures[f];
+					
+					if(this.config.lines !== '' ) {
+					
+						if(this.kvv_lines(tram.route, this.config.lines)) {
+																		
+									if (this.config.direction === '1') {
+										if (tram.direction === '1') {
+												table.appendChild(this.createDataRow(tram));
+												counter = counter + 1;
+										}
+									} else if (this.config.direction === '2') {
+										if (tram.direction === '2') {
+												table.appendChild(this.createDataRow(tram));
+												counter = counter + 1;
+										}
+									} else {
+										table.appendChild(this.createDataRow(tram));
+										counter = counter + 1;
+									}
+						} 
+					
+					} else {
+						
+						if (this.config.direction === '1') {
+								if (tram.direction === '1') {
+										table.appendChild(this.createDataRow(tram));
+										counter = counter + 1;
+								}
+							} else if (this.config.direction === '2') {
+								if (tram.direction === '2') {
+										table.appendChild(this.createDataRow(tram));
+										counter = counter + 1;
+								}
+							} else {
+								table.appendChild(this.createDataRow(tram));
+								counter = counter + 1;
+							}
+					}
+					
+					}
+									
+				if (counter == 0) {
+									
+					if (!this.hidden) {
+						table.appendChild(this.createNoTramRow());
+						wrapper.appendChild(table);
+						this.hide(10000);
+										}
+					
+				} else {
+
+					if (this.hidden) {
+						this.show(5000);
 					} 
 				
-				} else {
+					wrapper.appendChild(table);
+				}
 					
-					if (this.config.direction === '1') {
-							if (tram.direction === '1') {
-									table.appendChild(this.createDataRow(tram));
-									counter = counter + 1;
-							}
-						} else if (this.config.direction === '2') {
-							if (tram.direction === '2') {
-									table.appendChild(this.createDataRow(tram));
-									counter = counter + 1;
-							}
-						} else {
-							table.appendChild(this.createDataRow(tram));
-							counter = counter + 1;
-						}
-				}
-				
-				}
-								
-			if (counter == 0) {
-				this.hide();
-			} else {
-				wrapper.appendChild(table);
 			}
-				
-		}
 					
 		return wrapper; 
 		
@@ -191,6 +245,19 @@ Module.register("MMM-KVV", {
 		return spacerRow;
     },
 
+	
+    createNoTramRow: function () {
+        var noTramRow = document.createElement("tr");
+		
+		var noTramHeader = document.createElement("th");
+		noTramHeader.className = "noTramRow";
+		noTramHeader.setAttribute("colSpan", "3");
+		noTramHeader.innerHTML = this.translate("NO-TRAMS");
+		noTramRow.appendChild(noTramHeader); 
+      	
+		return noTramRow;
+    },
+	
     createDataRow: function (data) {
         var row = document.createElement("tr");
 
