@@ -12,4 +12,4 @@ This module adheres to [Semantic Versioning](http://semver.org/).
 - Module failed to reappear once it had disappeared
 
 ## [1.0.0] - 2016-08-25 
-Initial release
+### Initial release
