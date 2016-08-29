@@ -7,6 +7,11 @@ It's always nice to see mirrors using my work, so feel free to send me some scre
 
 Lastly, why not join in on our discussions at the official [MagicMirror<sup>2</sup> Forum](http://forum.magicmirror.builders/)?
 
+## Current version
+
+v1.0.1
+
+
 ## Screenshots
 
 ![German version](screenshots/screenshot_de.png)
