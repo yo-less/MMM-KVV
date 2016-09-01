@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/yo-less/MMM-KVV#readme",
   "dependencies": {
-    "request": "^2.15.8"
+    "request": "^2.74.0"
   }
 }
