@@ -274,8 +274,12 @@ Module.register("MMM-KVV", {
 		departure.className = "departure";
         if (data.time == "0"){
 		departure.innerHTML = this.translate("NOW");
-		} else if (data.time.charAt(2)==":"){
+		} else if (data.time.charAt(2)==":"){	// Append "Uhr" to data given in "hh:mm" format if config language is German
 		departure.innerHTML = data.time + this.translate("TIME");
+		} else if (data.time.substr(data.time.length - 5) == "1 min") {
+		departure.innerHTML = 'In ' + data.time.slice(0, -4) + ' ' + this.translate("MINUTE"); // Give remaining time as 'In 1 minute' rather than as '1 min'
+		} else if (data.time.substr(data.time.length - 3) == "min") {
+		departure.innerHTML = 'In ' + data.time.slice(0, -4) + ' ' + this.translate("MINUTES"); // Give remaining time as 'in d minutes' rather than as '\d min'
 		} else {
 		departure.innerHTML = data.time;
 		}
