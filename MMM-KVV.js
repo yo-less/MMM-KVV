@@ -1,7 +1,7 @@
 /* Magic Mirror
  * Module: MMM-KVV
  *
- * By yo-less
+ * By yo-less / https://github.com/yo-less
  * MIT Licensed.
  */
 
