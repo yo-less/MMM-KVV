@@ -14,7 +14,7 @@ Lastly, why not join in on our discussions at the official [MagicMirror<sup>2</s
 
 ## Current version
 
-v1.0.1
+v1.0.2
 
 ## Languages
 As of version 1.0.0, MMM-KVV features language support for `German (de)` and `English (en)` mirrors.
