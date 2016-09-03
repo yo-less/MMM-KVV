@@ -7,6 +7,7 @@ This module adheres to [Semantic Versioning](http://semver.org/).
 - "Departure" changed to "Due" in English translation file (en.json)
 - Due time is given as time phrase: '2 min' -> 'In 2 minutes'
 - Increased space between 'line' and 'destination' columns
+- Node helper now reports back with the console line "Starting node helper for: MMM-KVV"
 
 ## [1.0.1] - 2016-08-29
 
