@@ -1,6 +1,6 @@
 {
   "name": "MMM-KVV",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MagicMirror² module - station monitor for the Karlsruhe public transport system (KVV)",
   "repository": {
     "type": "git",
