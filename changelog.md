@@ -1,6 +1,13 @@
 # MMM-KVV changelog
 This module adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.2] - 2016-09-03
+
+### Changed
+- "Departure" changed to "Due" in English translation file (en.json)
+- Due time is given as time phrase: '2 min' -> 'In 2 minutes'
+- Increased space between 'line' and 'destination' columns
+
 ## [1.0.1] - 2016-08-29
 
 ### Added
