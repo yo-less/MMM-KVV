@@ -61,7 +61,7 @@ Sample configuration entry for your `~/MagicMirror/config/config.js` with option
         position: 'top_left',
         config: {
 			stopID: '',		// Which stop would you like to have displayed?
-			maxConn: 6,		// How many connections would you like to see?
+			maxConn: 6,		// How many connections would you like to see? (Maximum: 10)
 			lines: '',		// What lines are you interested in?
 			direction: '',	// If you want to, you can limit the information to one of two directions
 			labelRow: true, // Show or hide column headers
