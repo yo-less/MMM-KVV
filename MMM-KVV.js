@@ -3,6 +3,8 @@
  *
  * By yo-less / https://github.com/yo-less
  * MIT Licensed.
+ * 
+ * v1.0.3
  */
 
 Module.register("MMM-KVV", {
