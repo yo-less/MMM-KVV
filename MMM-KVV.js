@@ -8,7 +8,7 @@
 Module.register("MMM-KVV", {
 
     defaults: {
-		apiBase: 'http://live.kvv.de/webapp/departures/bystop/',
+		apiBase: 'https://live.kvv.de/webapp/departures/bystop/',
 		apiKey: '377d840e54b59adbe53608ba1aad70e8',
 		stopID: 'de:8212:89',
 		maxConn: '8',
